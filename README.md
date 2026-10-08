@@ -1,6 +1,6 @@
-# TMP421 Temperature Sensor Script for Raspberry Pi OS Trixie
+# TMP421 Temperature Sensor Script for Raspberry Pi OS
 
-This script reads the internal temperature from a TMP421 temperature sensor connected to a Raspberry Pi via I2C.
+This script reads the internal temperature from a TMP421 temperature sensor connected to a Raspberry Pi via I2C. Tested on Trixie but other variants may also work
 
 ## Hardware Setup
 
@@ -34,6 +34,7 @@ This script reads the internal temperature from a TMP421 temperature sensor conn
    i2cdetect -y 1
    # Should show 3e in the output
    ```
+See `SETUP.md` for full setup guide
 
 ## Usage
 
@@ -90,6 +91,7 @@ Use `tmp421_advanced.sh` for additional features:
 ./tmp421_advanced.sh -r -c --log
 ./tmp421_advanced.sh -r -c -F
 ```
+See `QUICK_REFERENCE.md` for more info
 
 ## Service Mode
 
@@ -101,6 +103,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now tmp421_monitor.service
 sudo systemctl status tmp421_monitor.service
 ```
+See `QUICK_REFERENCE.md` for more info
 
 ## Troubleshooting
 
